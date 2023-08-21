@@ -1,5 +1,7 @@
 # Portfolio
 
+- TECH STACK - React , Tailwind CSS
+
 - In my portfolio, you will find a collection of projects that showcase my growth as a frontend developer.
 
 - I can do multiple frontend websites, designs and analyses at a time.
