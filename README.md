@@ -1,8 +1,9 @@
-# React + Vite
+# Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- TECH STACK - React , Tailwind CSS
 
-Currently, two official plugins are available:
+- In my portfolio, you will find a collection of projects that showcase my growth as a frontend developer.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- I can do multiple frontend websites, designs and analyses at a time.
+
+- Currently, I love to work on web application using technologies like JavaScript, React, Next.js, Tailwind CSS and many more.
