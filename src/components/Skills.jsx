@@ -7,7 +7,7 @@ import nextjs from "../assets/nextjs.png";
 import github from "../assets/github.png";
 import tailwind from "../assets/tailwind.png";
 import scss from "../assets/scss.png";
-import java from "../assets/java.png";
+import redux from "../assets/redux.png";
 import linux from "../assets/linux.png"
 
 const Skills = () => {
@@ -57,9 +57,9 @@ const Skills = () => {
         },
         {
             id: 8,
-            src: java,
-            title: "Java",
-            style: 'shadow-red-500'
+            src: redux,
+            title: "Redux",
+            style: 'shadow-purple-500'
         },
         {
             id: 9,
