@@ -14,7 +14,7 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-20">
-          Hi! I'm Aalia Amin pursuing MCA from Lovely Professional
+          Hi! I'm Aalia Amin completed MCA from Lovely Professional
           University(LPU). Focused in Frontend Developer, problems solving and I
           really love playing with logical features. I can do multiple frontend
           websites, designs and analyses at a time. I'm looking for a great,
