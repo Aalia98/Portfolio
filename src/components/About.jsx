@@ -14,10 +14,10 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-20">
-          Hi! I'm Aalia Amin completed MCA from Lovely Professional
+          Hi! I am Aalia Amin completed MCA from Lovely Professional
           University(LPU). Focused in Frontend Developer, problems solving and I
           really love playing with logical features. I can do multiple frontend
-          websites, designs and analyses at a time. I'm looking for a great,
+          websites, designs and analyses at a time. I am looking for a great,
           enthusiastic engineering team to work for that will provide me with
           challenging , interesting work that I can learn from. Ready to explore
           my ideas to create new things.
@@ -28,11 +28,15 @@ const About = () => {
           websites come to life through code and design. Through dedicated
           learning and hands-on practice, I have developed a wide range of
           frontend applications using various techs like HTML , CSS , JavaScript
-          , React.js , Next.js , Java , each project
-          reflects my dedication to staying current with industry trends and
-          best practices. I have experimented with various tool and frameworks
-          like Git , Tailwind CSS and SASS . I believe that learning is a lifelong journey, and I am enthusiastic about collaborating with other developers, designers, and professionals to continuously enhance my skills and take on new challenges. My goal is not only to make beautiful websites but also to make a meaningful impact through technology.
-          Thank you for visiting my portfolio.
+          , React.js, Redux , Next.js, React Native , Data Structures and Algorithms , each project reflects my dedication to
+          staying current with industry trends and best practices. I have
+          experimented with various tool and frameworks like Git , Tailwind CSS
+          and Linux . I believe that learning is a lifelong journey, and I am
+          enthusiastic about collaborating with other developers, designers, and
+          professionals to continuously enhance my skills and take on new
+          challenges. My goal is not only to make beautiful websites but also to
+          make a meaningful impact through technology. Thank you for visiting my
+          portfolio.
         </p>
       </div>
     </div>
