@@ -14,29 +14,41 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-20">
-          Hi! I am Aalia Amin completed MCA from Lovely Professional
-          University(LPU). Focused in Frontend Developer, problems solving and I
-          really love playing with logical features. I can do multiple frontend
-          websites, designs and analyses at a time. I am looking for a great,
-          enthusiastic engineering team to work for that will provide me with
-          challenging , interesting work that I can learn from. Ready to explore
-          my ideas to create new things.
+          I'm Aalia Amin, an Immediate joiner and a Software Engineer around 2
+          years of professional experience building scalable backend systems and
+          full-stack applications.
         </p>
         <br />
         <p className="text-xl">
-          My journey into frontend development began with a fascination for how
-          websites come to life through code and design. Through dedicated
-          learning and hands-on practice, I have developed a wide range of
-          frontend applications using various techs like HTML , CSS , JavaScript
-          , React.js, Redux , Next.js, React Native , Data Structures and Algorithms , each project reflects my dedication to
-          staying current with industry trends and best practices. I have
-          experimented with various tool and frameworks like Git , Tailwind CSS
-          and Linux . I believe that learning is a lifelong journey, and I am
-          enthusiastic about collaborating with other developers, designers, and
-          professionals to continuously enhance my skills and take on new
-          challenges. My goal is not only to make beautiful websites but also to
-          make a meaningful impact through technology. Thank you for visiting my
-          portfolio.
+          During my professional experience at RNGplay, I worked on systems
+          powering 20+ real-time slot games with 10K+ concurrent users. I
+          contributed to backend services and engineering solutions focused on
+          scalability, performance, reliability, and efficient data processing.
+        </p>
+        <br />
+        <p className="text-xl">
+          My technical experience includes <b> Go</b>, <b>React</b>, <b>TypeScript</b>, <b>Kafka</b>, <b>Redis</b>,
+          and <b>MySQL</b>. I have worked with <b> Microservices, REST APIs, Event-Driven
+          Architectures, Caching, Database Optimization, Concurrency,</b> and
+          <b> Distributed Systems</b>. I enjoy understanding how systems work under the hood, identifying
+          performance bottlenecks, solving complex engineering problems, and
+          writing clean, maintainable code. I am particularly interested in
+          building scalable backend systems while also having the flexibility to
+          work across the full stack.
+        </p>
+        <br />
+        <p className="text-xl">
+          One of my key projects is a full-stack e-commerce platform built with
+          <b> Go, React, MySQL, Redis,</b> and <b> Kafka</b>, where I implemented
+          authentication, role-based authorization, caching, asynchronous
+          processing, and database optimization.
+        </p>
+        <br />
+        <p className="text-xl">
+          I'm continuously learning and improving my skills in <b> Software
+          Engineering, System Design, Distributed Systems, and Data Structures
+          and Algorithms</b>. My goal is to build reliable, scalable products and
+          grow as a strong Software Engineer.
         </p>
       </div>
     </div>
