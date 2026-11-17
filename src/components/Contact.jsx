@@ -82,7 +82,7 @@ const Contact = () => {
       {/* Footer */}
       <p className="text-center sm:text-right text-xs sm:text-sm
       font-bold text-gray-400 mt-10 sm:mt-16">
-        Copyright © 2023 by Aalia Amin | All Rights Reserved.
+        Copyright © 2026 by Aalia Amin | All Rights Reserved.
       </p>
     </div>
   );
