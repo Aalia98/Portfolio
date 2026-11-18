@@ -160,7 +160,7 @@ const Portfolio = () => {
                 <p className="text-sm font-medium mb-6">{tech}</p>
                 <div className="flex flex-wrap gap-3 mt-auto">
                   <a href={github} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md bg-gray-700 hover:bg-gray-600" aria-label={`Source code for ${name}`}>Code</a>
-                  <a href={`${github}#readme`} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md border border-gray-500 hover:bg-gray-700" aria-label={`README and setup for ${name}`}>README / Setup</a>
+                  <a href={`${github}/blob/master/README.md`} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md border border-gray-500 hover:bg-gray-700" aria-label={`README and setup for ${name}`}>README / Setup</a>
                 </div>
               </article>
             ))}
