@@ -39,6 +39,21 @@ const Portfolio = () => {
     },
   ];
 
+  const backendProjects = [
+    {
+      name: "E-commerce Backend",
+      tech: "Go, MySQL, Redis, Kafka",
+      description: "An e-commerce API learning project with JWT authentication, admin routes, product filtering, a Redis cart and Kafka order events.",
+      github: "https://github.com/Aalia98/Scalable_E-commerce_System",
+    },
+    {
+      name: "Task Management API",
+      tech: "Go, MySQL",
+      description: "A single-user REST API for creating, listing, updating and deleting tasks. Built with Go's standard library and MySQL.",
+      github: "https://github.com/Aalia98/Task-Management-App",
+    },
+  ];
+
   return (
     <div
       name="portfolio"
@@ -64,6 +79,7 @@ const Portfolio = () => {
           </p>
         </div>
 
+        <h3 className="text-2xl font-bold mb-6">Frontend</h3>
         {/* Portfolio Grid */}
         <div
           className="grid grid-cols-1 sm:grid-cols-2
@@ -130,6 +146,25 @@ const Portfolio = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-14">
+          <h3 className="text-2xl font-bold mb-2">Backend</h3>
+          <p className="text-gray-300 text-sm mb-6">Go API projects with source code and local setup notes. No live demos linked.</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            {backendProjects.map(({ name, tech, description, github }) => (
+              <article key={name} className="border border-gray-600 rounded-lg p-6 flex flex-col bg-gray-900/40">
+                <p className="text-xs tracking-widest uppercase text-cyan-300 mb-3">Backend API</p>
+                <h4 className="text-xl font-bold mb-3">{name}</h4>
+                <p className="text-gray-300 text-sm leading-relaxed mb-4">{description}</p>
+                <p className="text-sm font-medium mb-6">{tech}</p>
+                <div className="flex flex-wrap gap-3 mt-auto">
+                  <a href={github} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md bg-gray-700 hover:bg-gray-600" aria-label={`Source code for ${name}`}>Code</a>
+                  <a href={`${github}#readme`} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md border border-gray-500 hover:bg-gray-700" aria-label={`README and setup for ${name}`}>README / Setup</a>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </div>
