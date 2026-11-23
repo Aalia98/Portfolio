@@ -1,7 +1,7 @@
 // Public contact details. Change here only.
 export const WHATSAPP_NUMBER = "917903168712"; // country code + number, digits only
 export const WHATSAPP_MESSAGE =
-  "Hi Aalia, I saw your portfolio and I'd like to talk about a project.";
+  "Hi Aalia, I found your portfolio. Are you free for a quick chat about a role or freelance work?";
 export const whatsappLink = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
   WHATSAPP_MESSAGE
 )}`;
