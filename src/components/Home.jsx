@@ -37,7 +37,7 @@ const Home = () => (
         </div>
       </div>
       <img src={Profile} alt="Aalia Amin"
-        className="h-48 w-48 rounded-full border-4 border-[#6d7bff] object-cover shadow-[0_0_80px_rgba(91,107,255,.4)] sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-[30rem] lg:w-[30rem]" />
+        className="h-48 w-48 rounded-full border-4 border-[#6d7bff] object-cover shadow-[0_0_80px_rgba(91,107,255,.4)] sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]" />
     </div>
   </div>
 );
