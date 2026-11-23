@@ -1,4 +1,4 @@
-import Profile from "../assets/4.jpg";
+import Profile from "../assets/home-white.svg";
 import { Link } from "react-scroll";
 import WhatsAppButton from "./WhatsAppButton";
 
