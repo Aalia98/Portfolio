@@ -13,7 +13,7 @@ const Home = () => (
     style={{ backgroundImage: "radial-gradient(700px 380px at 80% 20%, rgba(59,47,209,.35), transparent)" }}>
     <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-screen-lg flex-col-reverse items-start justify-center gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:gap-16">
       <div className="flex-1">
-        <p className="text-xs tracking-[0.25em] text-[#7c8cff]">FULL STACK SOFTWARE ENGINEER</p>
+        <p className="text-xs tracking-[0.25em] text-[#7c8cff]">SOFTWARE ENGINEER</p>
         <h1 className="my-4 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
           I build{" "}
           <span className="bg-gradient-to-r from-[#7c8cff] to-[#38e1ff] bg-clip-text text-transparent">complete products</span>
