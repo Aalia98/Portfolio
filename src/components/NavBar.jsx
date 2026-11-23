@@ -2,88 +2,28 @@ import { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
 
+const links = ["home", "about", "portfolio", "skills", "contact"];
+
 const NavBar = () => {
   const [nav, setNav] = useState(false);
-
-  const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "portfolio",
-    },
-    {
-      id: 4,
-      link: "skills",
-    },
-    {
-      id: 5,
-      link: "contact",
-    },
-  ];
-
   return (
-    <div className="flex justify-between items-center w-full h-16 sm:h-20 px-4 sm:px-6 text-white bg-black fixed top-0 left-0 z-50">
-      
-      {/* Logo */}
-      <div>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-signature ml-1 sm:ml-2">
-          Portfolio
-        </h1>
-      </div>
-
-      {/* Desktop Menu */}
-      <ul className="hidden md:flex items-center">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-3 lg:px-4 cursor-pointer capitalize font-medium
-            text-gray-500 hover:text-white hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
+    <div className="fixed top-0 left-0 z-50 flex h-16 w-full items-center justify-between bg-[#0b0d1a]/90 px-5 text-white backdrop-blur sm:px-10">
+      <h1 className="text-xl font-bold">Aalia Amin</h1>
+      <ul className="hidden items-center md:flex">
+        {links.map((l) => (
+          <li key={l} className="cursor-pointer px-4 font-medium capitalize text-[#9aa0c3] duration-200 hover:text-white">
+            <Link to={l} smooth duration={500}>{l}</Link>
           </li>
         ))}
       </ul>
-
-      {/* Mobile Menu Button */}
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-1 sm:pr-2 z-[60] text-gray-400 md:hidden"
-      >
-        {nav ? <FaTimes size={28} /> : <FaBars size={28} />}
+      <div onClick={() => setNav(!nav)} className="z-[60] cursor-pointer text-[#9aa0c3] md:hidden">
+        {nav ? <FaTimes size={26} /> : <FaBars size={26} />}
       </div>
-
-      {/* Mobile Menu */}
       {nav && (
-        <ul
-          className="flex flex-col justify-center items-center
-          absolute top-16 sm:top-20 left-0 w-full h-[calc(100vh-4rem)]
-          sm:h-[calc(100vh-5rem)]
-          bg-gradient-to-b from-black to-gray-800 text-gray-400
-          md:hidden"
-        >
-          {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="py-5 sm:py-6 cursor-pointer capitalize
-              text-3xl sm:text-4xl hover:text-white duration-200"
-            >
-              <Link
-                onClick={() => setNav(false)}
-                to={link}
-                smooth
-                duration={500}
-              >
-                {link}
-              </Link>
+        <ul className="absolute left-0 top-0 flex h-screen w-full flex-col items-center justify-center bg-[#0b0d1a] text-[#c3c8ff]">
+          {links.map((l) => (
+            <li key={l} className="cursor-pointer py-6 text-3xl capitalize">
+              <Link onClick={() => setNav(false)} to={l} smooth duration={500}>{l}</Link>
             </li>
           ))}
         </ul>

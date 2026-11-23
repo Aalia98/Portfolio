@@ -1,78 +1,45 @@
-import Profile from "../assets/4.jpg";
-import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Profile from "../assets/home-white.svg";
 import { Link } from "react-scroll";
-import "../index.css";
+import WhatsAppButton from "./WhatsAppButton";
 
-const Home = () => {
-  return (
-    <div
-      name="home"
-      className="min-h-screen w-full bg-gradient-to-b from-black via-black to-gray-800 sm: mt-5"
-    >
-      <div
-        className="max-w-screen-lg mx-auto flex flex-col items-center
-        justify-center min-h-screen w-full px-6 py-12
-        md:flex-row md:justify-between md:px-4 md:py-2"
-      >
-        {/* Left Section */}
-        <div className="flex flex-col justify-center w-full md:flex-1">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl text-white">
-            I'm
-          </h2>
+const stats = [
+  ["2+", "years building"],
+  ["20+", "live games"],
+  ["10K+", "concurrent users"],
+];
 
-          <h1 className="name text-5xl sm:text-6xl md:text-8xl">
-            AALIA
-          </h1>
-
-          <p className="text-2xl sm:text-3xl md:text-4xl text-white">
-            Software Engineer
-          </p>
-
-          <p className="text-gray-400 py-4 max-w-md text-sm sm:text-base leading-relaxed">
-            In my portfolio, you will find a collection of projects that
-            showcase my growth as a Software Engineer. I love building scalable
-            backend systems and full-stack applications. I work primarily with{" "}
-            <b>Go</b>, <b>React</b>, <b>TypeScript</b>, <b>Kafka</b>,{" "}
-            <b>Redis</b>, and <b>MySQL</b>. I'm passionate about distributed
-            systems, performance optimization, concurrency, and creating
-            software that is reliable, scalable, and built to solve real
-            problems. Welcome to my portfolio — feel free to explore my work
-            and projects!
-          </p>
-
-          <div>
-            <Link
-              to="portfolio"
-              smooth
-              duration={500}
-              className="group text-white w-fit px-6 py-3 my-2
-              flex items-center rounded-md bg-gradient-to-r
-              from-cyan-500 to-blue-500 cursor-pointer"
-            >
-              Portfolio
-
-              <span className="group-hover:rotate-90 duration-300">
-                <MdOutlineKeyboardArrowRight
-                  size={25}
-                  className="ml-1"
-                />
-              </span>
-            </Link>
-          </div>
+const Home = () => (
+  <div name="home" className="min-h-screen w-full bg-[#0b0d1a] pt-16 text-[#e8eaf6]"
+    style={{ backgroundImage: "radial-gradient(700px 380px at 80% 20%, rgba(59,47,209,.35), transparent)" }}>
+    <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-screen-xl flex-col-reverse items-start justify-center gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:gap-16">
+      <div className="flex-1">
+        <p className="text-xs tracking-[0.25em] text-[#7c8cff]">SOFTWARE ENGINEER</p>
+        <h1 className="my-4 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+          I build{" "}
+          <span className="bg-gradient-to-r from-[#7c8cff] to-[#38e1ff] bg-clip-text text-transparent">complete products</span>
+          , front to back.
+        </h1>
+        <p className="max-w-lg text-base leading-relaxed text-[#a9aed0] sm:text-lg">
+          Around 2 years building Go backends and React + TypeScript frontends.
+          Available now for full-time roles and freelance projects.
+        </p>
+        <div className="mt-7 flex flex-wrap gap-3">
+          <Link to="portfolio" smooth duration={500}
+            className="cursor-pointer rounded-xl bg-gradient-to-r from-[#6d7bff] to-[#38c8ff] px-6 py-3 font-semibold text-white hover:scale-105 duration-200">
+            View portfolio
+          </Link>
+          <WhatsAppButton />
         </div>
-
-        {/* Right Section */}
-        <div className="w-full md:flex-1 mt-10 md:mt-0">
-          <img
-            src={Profile}
-            alt="my_profile"
-            className="mx-auto w-2/3 sm:w-1/2 md:w-full pl-2
-            rounded-full"
-          />
+        <div className="mt-8 flex gap-8">
+          {stats.map(([a, b]) => (
+            <div key={b}><b className="block text-2xl sm:text-3xl">{a}</b><span className="text-xs text-[#8a90b8]">{b}</span></div>
+          ))}
         </div>
       </div>
+      <img src={Profile} alt="Aalia Amin"
+        className="h-48 w-48 rounded-full border-4 border-[#6d7bff] object-cover shadow-[0_0_80px_rgba(91,107,255,.4)] sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-[26rem] lg:w-[26rem]" />
     </div>
-  );
-};
+  </div>
+);
 
 export default Home;
