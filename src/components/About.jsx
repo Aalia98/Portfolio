@@ -11,7 +11,7 @@ const Pill = ({ children }) => (
 
 const About = () => (
   <div name="about" className="min-h-screen w-full bg-[#0b0d1a] text-[#e8eaf6]">
-    <div className="mx-auto max-w-screen-lg px-6 py-20 sm:px-8 md:px-4">
+    <div className="mx-auto max-w-screen-xl px-6 py-20 sm:px-8">
       <Heading title="About" sub="Full stack, with a strong Go backend" />
       <div className="grid gap-10 md:grid-cols-5">
         <div className="space-y-5 text-base leading-relaxed text-[#c3c7e6] sm:text-lg md:col-span-3">
