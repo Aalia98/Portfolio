@@ -76,7 +76,7 @@ const Portfolio = () => {
 
   return (
     <div name="portfolio" className="min-h-screen w-full bg-[#0b0d1a] text-[#e8eaf6]">
-      <div className="mx-auto max-w-screen-lg px-6 py-20 sm:px-8 md:px-4">
+      <div className="mx-auto max-w-screen-xl px-6 py-20 sm:px-8">
         <div className="pb-10">
           <h2 className="text-3xl font-bold sm:text-4xl">Portfolio</h2>
           <p className="mt-2 text-[#8a90b8]">Backend, frontend and full stack work</p>
