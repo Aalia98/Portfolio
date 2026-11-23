@@ -11,7 +11,7 @@ const stats = [
 const Home = () => (
   <div name="home" className="min-h-screen w-full bg-[#0b0d1a] pt-16 text-[#e8eaf6]"
     style={{ backgroundImage: "radial-gradient(700px 380px at 80% 20%, rgba(59,47,209,.35), transparent)" }}>
-    <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-screen-lg flex-col-reverse items-start justify-center gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:gap-16">
+    <div className="mx-auto flex min-h-[calc(100vh-4rem)] max-w-screen-xl flex-col-reverse items-start justify-center gap-10 px-6 py-12 md:flex-row md:items-center md:justify-between md:gap-16">
       <div className="flex-1">
         <p className="text-xs tracking-[0.25em] text-[#7c8cff]">SOFTWARE ENGINEER</p>
         <h1 className="my-4 text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
@@ -37,7 +37,7 @@ const Home = () => (
         </div>
       </div>
       <img src={Profile} alt="Aalia Amin"
-        className="h-48 w-48 rounded-full border-4 border-[#6d7bff] object-cover shadow-[0_0_80px_rgba(91,107,255,.4)] sm:h-72 sm:w-72 md:h-80 md:w-80" />
+        className="h-48 w-48 rounded-full border-4 border-[#6d7bff] object-cover shadow-[0_0_80px_rgba(91,107,255,.4)] sm:h-72 sm:w-72 md:h-80 md:w-80 lg:h-[30rem] lg:w-[30rem]" />
     </div>
   </div>
 );
