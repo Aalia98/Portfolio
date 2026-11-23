@@ -54,117 +54,84 @@ const Portfolio = () => {
     },
   ];
 
-  return (
-    <div
-      name="portfolio"
-      className="bg-gradient-to-b from-black to-gray-800
-      w-full min-h-screen text-white mx-auto"
-    >
-      <div
-        className="w-full sm:w-4/5 px-6 sm:px-8 md:px-4
-        py-16 sm:py-20 md:py-24
-        mx-auto flex flex-col justify-center"
-      >
-        {/* Heading */}
-        <div className="py-8 sm:py-10">
-          <p
-            className="text-3xl sm:text-4xl font-bold inline
-            border-b-4 border-gray-500"
-          >
-            PORTFOLIO
-          </p>
+  const fullStack = [
+    {
+      name: "Portfolio + Go Contact API",
+      tech: "React, Tailwind CSS, Go",
+      description: "This site: a React frontend with a Go backend that validates contact-form messages, rate-limits spam and notifies me by email.",
+      live: "https://portfolio-aalia98.netlify.app",
+      frontend: "https://github.com/Aalia98/Portfolio",
+      backend: "https://github.com/Aalia98/portfolio-contact-api",
+    },
+  ];
 
-          <p className="py-5 sm:py-6 text-sm sm:text-base text-gray-300">
-            Check out some of my work right here...
-          </p>
+  const Title = ({ children, sub }) => (
+    <div className="mb-6 mt-14 first:mt-0">
+      <h3 className="text-2xl font-bold">{children}</h3>
+      <p className="mt-1 text-sm text-[#8a90b8]">{sub}</p>
+    </div>
+  );
+  const btn = "rounded-lg bg-[#232a7a] px-4 py-2 text-center text-sm hover:bg-[#2d36a0] duration-200";
+  const ghost = "rounded-lg border border-[#3a418a] px-4 py-2 text-center text-sm hover:bg-[#1b2050] duration-200";
+
+  return (
+    <div name="portfolio" className="min-h-screen w-full bg-[#0b0d1a] text-[#e8eaf6]">
+      <div className="mx-auto max-w-screen-lg px-6 py-20 sm:px-8 md:px-4">
+        <div className="pb-10">
+          <h2 className="text-3xl font-bold sm:text-4xl">Portfolio</h2>
+          <p className="mt-2 text-[#8a90b8]">Backend, frontend and full stack work</p>
         </div>
 
-        <h3 className="text-2xl font-bold mb-6">Frontend</h3>
-        {/* Portfolio Grid */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2
-          lg:grid-cols-3 gap-6 sm:gap-8"
-        >
-          {portfolios.map(({ id, src, name, netlify, github, tech }) => (
-            <div
-              key={id}
-              className="shadow-md shadow-gray-600
-                rounded-lg overflow-hidden
-                hover:shadow-xl duration-300"
-            >
-              {/* Project Name */}
-              <h1
-                className="font-bold text-center
-                  text-lg sm:text-xl py-4 px-2
-                  min-h-[72px] flex items-center justify-center"
-              >
-                {name}
-              </h1>
-
-              {/* Project Image */}
-              <div className="overflow-hidden">
-                <img
-                  src={src}
-                  alt={name}
-                  className="duration-300 hover:scale-105
-                    w-full h-52 sm:h-56 md:h-60
-                    object-cover"
-                />
+        <Title sub="Go APIs with source code and setup notes. No live demos linked.">Backend</Title>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {backendProjects.map(({ name, tech, description, github }) => (
+            <article key={name} className="flex flex-col rounded-2xl border border-[#262c55] bg-[#141830] p-6">
+              <span className="mb-3 w-fit rounded-full bg-[#232a7a] px-3 py-1 text-xs">Backend API</span>
+              <h4 className="mb-2 text-xl font-bold">{name}</h4>
+              <p className="mb-4 text-sm leading-relaxed text-[#a9aed0]">{description}</p>
+              <p className="mb-5 text-sm font-medium text-[#7c8cff]">{tech}</p>
+              <div className="mt-auto flex flex-wrap gap-3">
+                <a href={github} target="_blank" rel="noreferrer" className={btn}>Code</a>
+                <a href={`${github}/blob/master/README.md`} target="_blank" rel="noreferrer" className={ghost}>README / Setup</a>
               </div>
+            </article>
+          ))}
+        </div>
 
-              {/* Tech Stack */}
-              <p
-                className="text-center pt-4 px-2
-                  text-sm sm:text-base font-medium"
-              >
-                TECH STACK - {tech}
-              </p>
-
-              {/* Buttons */}
-              <div className="flex items-center justify-center gap-2 px-3 pb-4">
-                <a
-                  href={netlify}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-1/2 text-center px-4 py-2
-                    duration-200 hover:scale-105
-                    rounded-md bg-gray-700 hover:bg-gray-600"
-                >
-                  Demo
-                </a>
-
-                <a
-                  href={github}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="w-1/2 text-center px-4 py-2
-                    duration-200 hover:scale-105
-                    rounded-md bg-gray-700 hover:bg-gray-600"
-                >
-                  Code
-                </a>
+        <Title sub="React and JavaScript apps with live demos.">Frontend</Title>
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {portfolios.map(({ id, src, name, netlify, github, tech }) => (
+            <div key={id} className="overflow-hidden rounded-2xl border border-[#262c55] bg-[#141830]">
+              <div className="overflow-hidden">
+                <img src={src} alt={name} className="h-48 w-full object-cover duration-300 hover:scale-105" />
+              </div>
+              <div className="p-5">
+                <h4 className="min-h-[3rem] font-bold">{name}</h4>
+                <p className="mb-4 mt-1 text-sm text-[#7c8cff]">{tech}</p>
+                <div className="flex gap-3">
+                  <a href={netlify} target="_blank" rel="noreferrer" className={`${btn} w-1/2`}>Demo</a>
+                  <a href={github} target="_blank" rel="noreferrer" className={`${ghost} w-1/2`}>Code</a>
+                </div>
               </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-14">
-          <h3 className="text-2xl font-bold mb-2">Backend</h3>
-          <p className="text-gray-300 text-sm mb-6">Go API projects with source code and local setup notes. No live demos linked.</p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-            {backendProjects.map(({ name, tech, description, github }) => (
-              <article key={name} className="border border-gray-600 rounded-lg p-6 flex flex-col bg-gray-900/40">
-                <p className="text-xs tracking-widest uppercase text-cyan-300 mb-3">Backend API</p>
-                <h4 className="text-xl font-bold mb-3">{name}</h4>
-                <p className="text-gray-300 text-sm leading-relaxed mb-4">{description}</p>
-                <p className="text-sm font-medium mb-6">{tech}</p>
-                <div className="flex flex-wrap gap-3 mt-auto">
-                  <a href={github} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md bg-gray-700 hover:bg-gray-600" aria-label={`Source code for ${name}`}>Code</a>
-                  <a href={`${github}/blob/master/README.md`} target="_blank" rel="noreferrer" className="text-center px-4 py-3 rounded-md border border-gray-500 hover:bg-gray-700" aria-label={`README and setup for ${name}`}>README / Setup</a>
-                </div>
-              </article>
-            ))}
-          </div>
+        <Title sub="Frontend and backend built together.">Full Stack</Title>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          {fullStack.map(({ name, tech, description, live, frontend, backend }) => (
+            <article key={name} className="flex flex-col rounded-2xl border border-[#262c55] bg-gradient-to-br from-[#141830] to-[#1a1f4a] p-6">
+              <span className="mb-3 w-fit rounded-full bg-[#0e5e8a] px-3 py-1 text-xs">Full stack</span>
+              <h4 className="mb-2 text-xl font-bold">{name}</h4>
+              <p className="mb-4 text-sm leading-relaxed text-[#a9aed0]">{description}</p>
+              <p className="mb-5 text-sm font-medium text-[#7c8cff]">{tech}</p>
+              <div className="mt-auto flex flex-wrap gap-3">
+                <a href={live} target="_blank" rel="noreferrer" className={btn}>Live site</a>
+                <a href={frontend} target="_blank" rel="noreferrer" className={ghost}>Frontend code</a>
+                <a href={backend} target="_blank" rel="noreferrer" className={ghost}>Backend code</a>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </div>
