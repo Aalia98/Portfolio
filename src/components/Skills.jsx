@@ -121,7 +121,7 @@ const Skills = () => {
   return (
     <div
       name="skills"
-      className="bg-gradient-to-b from-gray-800 to-black
+      className="bg-[#0b0d1a]
       w-full min-h-screen text-white"
     >
       <div
